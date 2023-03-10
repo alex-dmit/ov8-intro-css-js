@@ -1,6 +1,7 @@
-let loginBtn = document.querySelector('.header-login-btn')
+// let loginBtn = document.querySelector('.header-login-btn')
 let loginModal = document.querySelector('.login-modal')
-loginBtn.onclick = function () {
+// loginBtn.onclick = function () {
+function login () {
   loginModal.classList.add('show')
   document.body.classList.add("stop-scrolling")
 }
@@ -19,5 +20,5 @@ loginModal.onsubmit = function(event) {
 
 function logout() {
   let userInfoElem = document.querySelector('.userinfo')
-  userInfoElem.innerHTML = '<button class="header-login-btn">Login</button>'
+  userInfoElem.innerHTML = '<button class="header-login-btn" onclick="login()">Login</button>'
 }
