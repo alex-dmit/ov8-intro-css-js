@@ -1,0 +1,232 @@
+:root {}
+
+html {
+    /* rem size */
+    font-size: 20px;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.appbar {
+    background-color: #1976d2;
+    display: flex;
+    /* gap: 1rem; */
+    height: 3.5rem;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo {
+    border-radius: 50%;
+    background-color: white;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: .7rem;
+}
+
+.appbar h1 {
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-right: 1.5rem;
+}
+
+.main-menu {
+    flex-grow: 1;
+}
+
+.main-menu ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    gap: 1rem;
+}
+
+.main-menu a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+.header-login-btn {
+    height: 1.7rem;
+    width: 7rem;
+    border: none;
+    background-color: white;
+    color: rgb(0, 127, 255);
+    font-size: 0.8rem;
+    border-radius: 6px;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),
+                0px 6px 10px 0px rgba(0,0,0,0.14),
+                0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+
+
+.stop-scrolling {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.login-modal.show {
+    display: block;
+}
+
+.login-modal {
+    /* Find nearest position: relative parent or Body*/
+    /* position: absolute; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: url('./alpe-di-siusi.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+
+.mask {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.311);
+    height: 100%;
+    width: 100%;
+}
+
+.login-container {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+    /* box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12); */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.login-container h1 {
+    text-align: center;
+}
+
+.login-form label {
+    font-size: 0.8rem;
+    /* 0-9ABCDEF */
+    color: #4b4b4b;
+}
+
+.login-form input {
+    height: 1.7rem;
+    margin-bottom: 15px;
+    border: 2px solid #AAA;
+    outline: none;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.login-form input:hover {
+    border-color: #888;
+}
+
+.login-form input:focus {
+    border-color: rgb(0, 89, 178);
+}
+
+.login-form button {
+    margin-top: 10px;
+    height: 1.7rem;
+    border: none;
+    background-color: rgb(0, 127, 255);
+    color: white;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),
+                0px 6px 10px 0px rgba(0,0,0,0.14),
+                0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+
+.login-form button:hover {
+    background-color: rgb(0, 89, 178);
+}
+
+@media screen and (max-width: 400px) {
+    .login-container {
+        height: 100%;
+        border-radius: 0;
+        justify-content: center;
+    }
+
+    .login-container h1 {
+        margin-top: 0;
+    }
+}
+
+
+
+
+
+.element {
+    /* h50 */
+    height: var(--elem-size);
+    width: var(--elem-size);
+    --border-color: rgb(196, 0, 0);
+    flex-basis: var(--elem-size);
+    background-color: var(--color);
+    border: 2px solid var(--border-color);
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    /* margin: 10px; */
+    /* display: inline-block; */
+    /* text-align: center; */
+    /* line-height: calc(50px - 14px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.custom-el {
+    order: 1;
+    flex-grow: 3;
+    flex-shrink: 3;
+    align-self: flex-start;
+}
+
+.container {
+    display: flex;
+    height: 600px;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: flex-start;
+    align-items: center;
+    align-content: stretch;
+    gap: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    :root {
+        --scale: 2;
+    }
+    .container {
+        flex-direction: column;
+    }
+}
