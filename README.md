@@ -1,8 +1,12 @@
 ## Отправить в Github.com:
 
+`$ git status`
+
 `$ git add .`
 
 `$ git commit -m "Text of the commit"`
+
+`$ git log`
 
 `$ git push origin master`
 
